@@ -25,6 +25,10 @@ func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("aws_elasticache_parameter_group", func(r *config.Resource) {
 		r.ExternalName = config.NameAsIdentifier
 	})
+	
+	p.AddResourceConfigurator("aws_elasticache_subnet_group", func(r *config.Resource) {
+		r.ExternalName = config.NameAsIdentifier
+	})
 
 	p.AddResourceConfigurator("aws_elasticache_cluster", func(r *config.Resource) {
 		r.ExternalName = config.ExternalName{
