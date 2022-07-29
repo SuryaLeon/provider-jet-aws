@@ -28,6 +28,11 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.ExternalName = config.NameAsIdentifier
 	})
+	
+	p.AddResourceConfigurator("aws_elasticache_subnet_group", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
+		r.ExternalName = config.NameAsIdentifier
+	})
 
 	p.AddResourceConfigurator("aws_elasticache_cluster", func(r *config.Resource) {
 		r.Version = common.VersionV1Alpha2
